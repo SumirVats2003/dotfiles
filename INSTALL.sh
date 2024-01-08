@@ -14,6 +14,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # set up zsh with ohmyzsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/mrx04programmer/ZshTheme-ArchCraft/ ~/.oh-my-zsh/themes
 
 # clone setup repository
 git clone git@github.com:SumirVats2003/dotfiles.git ~
