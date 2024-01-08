@@ -101,6 +101,7 @@ set wildmenu
 set clipboard=unnamed
 set guicursor=n-v-c:blinkon0-block-cursor
 set showcmd
+set noshowmode
 
 " Keymap Tweeks
 nnoremap <c-p> :PlugInstall<CR>
