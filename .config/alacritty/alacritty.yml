@@ -1,0 +1,11 @@
+font:
+  normal:
+    family: CodeNewRoman Nerd Font
+    style: Regular
+  size: 14.0
+
+window:
+  padding:
+    x: 5
+    y: 5
+
