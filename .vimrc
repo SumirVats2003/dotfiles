@@ -107,6 +107,8 @@ set clipboard=unnamed
 set guicursor=n-v-c:blinkon0-block-cursor
 set showcmd
 set noshowmode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " Keymap Tweeks
 nnoremap <c-p> :PlugInstall<CR>
