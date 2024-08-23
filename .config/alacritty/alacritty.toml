@@ -1,0 +1,10 @@
+[font]
+size = 14.0
+
+[font.normal]
+family = "Jetbrains Mono Nerd Font"
+style = "Regular"
+
+[window.padding]
+x = 5
+y = 5
