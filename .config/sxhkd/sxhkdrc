@@ -18,6 +18,10 @@ super + t
 super + d
 	dmenu_run
 
+# code
+super + c
+  Visual Studio Code
+
 # web browser
 super + f
   firefox
