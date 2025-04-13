@@ -1,32 +1,20 @@
--- These are the basic's for using wezterm.
--- Mux is the mutliplexes for windows etc inside of the terminal
--- Action is to perform actions on the terminal
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local act = wezterm.action
 
--- These are vars to put things in later (i dont use em all yet)
 local config = {}
 local keys = {}
 local mouse_bindings = {}
 local launch_menu = {}
 
--- This is for newer wezterm vertions to use the config builder 
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- Default config settings
--- These are the default config settins needed to use Wezterm
--- Just add this and return config and that's all the basics you need
-
--- Color scheme, Wezterm has 100s of them you can see here:
--- https://wezfurlong.org/wezterm/colorschemes/index.html
--- config.color_scheme = 'Catppuccin Mocha'
-config.color_scheme = 'tokyonight'
-config.font = wezterm.font('JetBrainsMono Nerd Font')
+config.font = wezterm.font('CaskaydiaCove Nerd Font')
 config.font_size = 14
 config.launch_menu = launch_menu
+-- config.window_background_opacity = 0.9
 
 -- this adds the ability to use ctrl+v to paste the system clipboard 
 config.keys = {
@@ -37,8 +25,6 @@ config.keys = {
 
 config.mouse_bindings = mouse_bindings
 
--- There are mouse binding to mimc Windows Terminal and let you copy
--- To copy just highlight something and right click. Simple
 mouse_bindings = {
   {
     event = { Down = { streak = 3, button = 'Left' } },
@@ -61,8 +47,6 @@ mouse_bindings = {
 }
 
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
-
--- The filled in variant of the > symbol
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 
 -- This function returns the suggested title for a tab.
@@ -80,85 +64,59 @@ function tab_title(tab_info)
   return tab_info.active_pane.title
 end
 
--- wezterm.on(
---   'format-tab-title',
---   function(tab, tabs, panes, config, hover, max_width)
---     local edge_background = '#010821'
---     local background = '#101b33'
---     local foreground = '#808080'
-
---     if tab.is_active then
---       background = '#172030'
---       foreground = '#c0c0c0'
---     elseif hover then
---       background = '#252d40'
---       foreground = '#909090'
---     end
-
---     local edge_foreground = background
-
---     local title = tab_title(tab)
-
---     -- ensure that the titles fit in the available space,
---     -- and that we have room for the edges.
---     title = wezterm.truncate_right(title, max_width - 2)
-
---     return {
---       { Background = { Color = edge_background } },
---       { Foreground = { Color = edge_foreground } },
---       { Text = SOLID_LEFT_ARROW },
---       { Background = { Color = background } },
---       { Foreground = { Color = foreground } },
---       { Text = title },
---       { Background = { Color = edge_background } },
---       { Foreground = { Color = edge_foreground } },
---       { Text = SOLID_RIGHT_ARROW },
---     }
---   end
--- )
-
--- config.window_frame = {
---   -- The font used in the tab bar.
---   -- Roboto Bold is the default; this font is bundled
---   -- with wezterm.
---   -- Whatever font is selected here, it will have the
---   -- main font setting appended to it to pick up any
---   -- fallback fonts you may have used there.
-
---   -- The size of the font in the tab bar.
---   -- Default to 10.0 on Windows but 12.0 on other systems
---   font_size = 10.0,
---   font = require('wezterm').font 'JetBrains Mono Nerd Font',
-
---   -- The overall background color of the tab bar when
---   -- the window is focused
---   active_titlebar_bg = '#333333',
-
---   -- The overall background color of the tab bar when
---   -- the window is not focused
---   inactive_titlebar_bg = '#333333',
--- }
-
--- config.colors = {
---   tab_bar = {
---     -- The color of the inactive tab bar edge/divider
---     inactive_tab_edge = '#575757',
---   },
--- }
-
-
--- This is used to make my foreground (text, etc) brighter than my background
-config.foreground_text_hsb = {
-  -- hue = 1.0,
-  -- saturation = 1.2,
-  -- brightness = 1.1,
-}
-
 config.tab_max_width = 20
 
--- IMPORTANT: Sets WSL2 UBUNTU-22.04 as the defualt when opening Wezterm
 config.default_domain = 'WSL:Ubuntu'
 config.window_decorations = "RESIZE"
+
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
+
+local my_colors = {
+  foreground = '#c3cfd9',
+  background = '#1c2433',
+  cursor_bg = '#c3cfd9',
+  cursor_fg = '#1c2433',
+  cursor_border = '#c3cfd9',
+  selection_fg = '#1c2433',
+  selection_bg = '#c3cfd9',
+  scrollbar_thumb = '#444c5b',
+  split = '#444c5b',
+  
+  ansi = {
+    '#1c2433', -- black
+    '#FF738A', -- red (maroon)
+    '#3CEC85', -- green
+    '#EACD61', -- yellow (olive)
+    '#69C3FF', -- blue (navy)
+    '#22ECDB', -- magenta (purple)
+    '#77aed7', -- cyan (teal)
+    '#c3cfd9', -- white (silver)
+  },
+  
+  brights = {
+    '#444c5b', -- bright black (grey)
+    '#FF738A', -- bright red
+    '#3CEC85', -- bright green (lime)
+    '#EACD61', -- bright yellow
+    '#69C3FF', -- bright blue
+    '#22ECDB', -- bright magenta (fuchsia)
+    '#77aed7', -- bright cyan (aqua)
+    '#ABB7C1', -- bright white
+  },
+  
+  indexed = { [16] = '#B78AFF' },
+  compose_cursor = '#EACD61',
+  
+  copy_mode_active_highlight_bg = { Color = '#3CEC85' },
+  copy_mode_active_highlight_fg = { Color = '#1c2433' },
+  copy_mode_inactive_highlight_bg = { Color = '#69C3FF' },
+  copy_mode_inactive_highlight_fg = { Color = '#1c2433' },
+}
 
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
 
@@ -167,19 +125,21 @@ bar.apply_to_config(config, {
   separator = {
     space = 1,
     left_icon = wezterm.nerdfonts.cod_remote,
-    -- right_icon = wezterm.nerdfonts.fa_long_arrow_left,
-    -- field_icon = wezterm.nerdfonts.indent_line,
   },
   modules = {
     tabs = {
-      active_tab_fg = 2
+      active_tab_fg = 7,
+      inactive_tab_fg = 3
     },
     workspace = {
       enabled = false,
-      -- icon = wez.nerdfonts.cod_window,
       color = 8,
     },
   }
 })
+
+for k, v in pairs(my_colors) do
+  config.colors[k] = v
+end
 
 return config
