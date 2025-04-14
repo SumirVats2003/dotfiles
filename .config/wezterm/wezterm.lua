@@ -76,7 +76,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-local my_colors = {
+local bearded_arc = {
   foreground = '#c3cfd9',
   background = '#1c2433',
   cursor_bg = '#c3cfd9',
@@ -138,7 +138,49 @@ bar.apply_to_config(config, {
   }
 })
 
-for k, v in pairs(my_colors) do
+local poimandres = {
+  foreground = '#A6ACCD',
+  background = '#1b1e28',
+  cursor_bg = '#A6ACCD',
+  cursor_fg = '#1b1e28',
+  cursor_border = '#A6ACCD',
+  selection_fg = '#1b1e28',
+  selection_bg = '#A6ACCD',
+  scrollbar_thumb = '#3b4258',
+  split = '#3b4258',
+  
+  ansi = {
+    '#1b1e28', -- black
+    '#A6ACCD', -- red
+    '#5DE4C7', -- green
+    '#5DE4C7', -- yellow
+    '#ADD7FF', -- blue
+    '#91B4D5', -- magenta
+    '#89DDFF', -- cyan
+    '#A6ACCD', -- white
+  },
+  
+  brights = {
+    '#3b4258', -- bright black
+    '#A6ACCD', -- bright red
+    '#5DE4C7', -- bright green
+    '#5DE4C7', -- bright yellow
+    '#ADD7FF', -- bright blue
+    '#91B4D5', -- bright magenta
+    '#89DDFF', -- bright cyan
+    '#b6d7f4', -- bright white
+  },
+  
+  indexed = { [16] = '#ffffff' },
+  compose_cursor = '#5DE4C7',
+  
+  copy_mode_active_highlight_bg = { Color = '#5DE4C7' },
+  copy_mode_active_highlight_fg = { Color = '#1b1e28' },
+  copy_mode_inactive_highlight_bg = { Color = '#ADD7FF' },
+  copy_mode_inactive_highlight_fg = { Color = '#1b1e28' },
+}
+
+for k, v in pairs(poimandres) do
   config.colors[k] = v
 end
 
