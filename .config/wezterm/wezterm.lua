@@ -11,6 +11,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+-- config.color_scheme = 'Catppuccin Mocha (Gogh)'
 config.font = wezterm.font('CaskaydiaCove Nerd Font')
 config.font_size = 14
 config.launch_menu = launch_menu
@@ -21,10 +22,6 @@ config.keys = {
   { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' }, 
   {key=',', mods = 'CTRL', action = wezterm.action.SplitVertical},
   {key='.', mods = 'CTRL', action = wezterm.action.SplitHorizontal},
-  {key='h', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Left"}},
-  {key='j', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Down"}},
-  {key='k', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Up"}},
-  {key='l', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Right"}},
 }
 
 config.mouse_bindings = mouse_bindings
@@ -80,47 +77,47 @@ config.window_padding = {
   bottom = 0,
 }
 
-local bearded_arc = {
-  foreground = '#c3cfd9',
-  background = '#1c2433',
-  cursor_bg = '#c3cfd9',
-  cursor_fg = '#1c2433',
-  cursor_border = '#c3cfd9',
-  selection_fg = '#1c2433',
-  selection_bg = '#c3cfd9',
-  scrollbar_thumb = '#444c5b',
-  split = '#444c5b',
+-- local bearded_arc = {
+--   foreground = '#c3cfd9',
+--   background = '#1c2433',
+--   cursor_bg = '#c3cfd9',
+--   cursor_fg = '#1c2433',
+--   cursor_border = '#c3cfd9',
+--   selection_fg = '#1c2433',
+--   selection_bg = '#c3cfd9',
+--   scrollbar_thumb = '#444c5b',
+--   split = '#444c5b',
   
-  ansi = {
-    '#1c2433', -- black
-    '#FF738A', -- red (maroon)
-    '#3CEC85', -- green
-    '#EACD61', -- yellow (olive)
-    '#69C3FF', -- blue (navy)
-    '#22ECDB', -- magenta (purple)
-    '#77aed7', -- cyan (teal)
-    '#c3cfd9', -- white (silver)
-  },
+--   ansi = {
+--     '#1c2433', -- black
+--     '#FF738A', -- red (maroon)
+--     '#3CEC85', -- green
+--     '#EACD61', -- yellow (olive)
+--     '#69C3FF', -- blue (navy)
+--     '#22ECDB', -- magenta (purple)
+--     '#77aed7', -- cyan (teal)
+--     '#c3cfd9', -- white (silver)
+--   },
   
-  brights = {
-    '#444c5b', -- bright black (grey)
-    '#FF738A', -- bright red
-    '#3CEC85', -- bright green (lime)
-    '#EACD61', -- bright yellow
-    '#69C3FF', -- bright blue
-    '#22ECDB', -- bright magenta (fuchsia)
-    '#77aed7', -- bright cyan (aqua)
-    '#ABB7C1', -- bright white
-  },
+--   brights = {
+--     '#444c5b', -- bright black (grey)
+--     '#FF738A', -- bright red
+--     '#3CEC85', -- bright green (lime)
+--     '#EACD61', -- bright yellow
+--     '#69C3FF', -- bright blue
+--     '#22ECDB', -- bright magenta (fuchsia)
+--     '#77aed7', -- bright cyan (aqua)
+--     '#ABB7C1', -- bright white
+--   },
   
-  indexed = { [16] = '#B78AFF' },
-  compose_cursor = '#EACD61',
+--   indexed = { [16] = '#B78AFF' },
+--   compose_cursor = '#EACD61',
   
-  copy_mode_active_highlight_bg = { Color = '#3CEC85' },
-  copy_mode_active_highlight_fg = { Color = '#1c2433' },
-  copy_mode_inactive_highlight_bg = { Color = '#69C3FF' },
-  copy_mode_inactive_highlight_fg = { Color = '#1c2433' },
-}
+--   copy_mode_active_highlight_bg = { Color = '#3CEC85' },
+--   copy_mode_active_highlight_fg = { Color = '#1c2433' },
+--   copy_mode_inactive_highlight_bg = { Color = '#69C3FF' },
+--   copy_mode_inactive_highlight_fg = { Color = '#1c2433' },
+-- }
 
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
 
@@ -133,7 +130,7 @@ bar.apply_to_config(config, {
   modules = {
     tabs = {
       active_tab_fg = 7,
-      inactive_tab_fg = 3
+      inactive_tab_fg = 2
     },
     workspace = {
       enabled = false,
@@ -155,7 +152,7 @@ local poimandres = {
   
   ansi = {
     '#1b1e28', -- black
-    '#A6ACCD', -- red
+    '#D0679D', -- red
     '#5DE4C7', -- green
     '#5DE4C7', -- yellow
     '#ADD7FF', -- blue
@@ -166,7 +163,7 @@ local poimandres = {
   
   brights = {
     '#3b4258', -- bright black
-    '#A6ACCD', -- bright red
+    '#D0679D', -- bright red
     '#5DE4C7', -- bright green
     '#5DE4C7', -- bright yellow
     '#ADD7FF', -- bright blue
