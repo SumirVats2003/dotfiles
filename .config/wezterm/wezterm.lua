@@ -22,6 +22,10 @@ config.keys = {
   { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' }, 
   {key=',', mods = 'CTRL', action = wezterm.action.SplitVertical},
   {key='.', mods = 'CTRL', action = wezterm.action.SplitHorizontal},
+  {key='h', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Left"}},
+  {key='j', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Down"}},
+  {key='k', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Up"}},
+  {key='l', mods = 'CTRL | SHIFT', action = wezterm.action{ActivatePaneDirection="Right"}},
 }
 
 config.mouse_bindings = mouse_bindings
