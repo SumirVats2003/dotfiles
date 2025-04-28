@@ -158,7 +158,7 @@ local poimandres = {
     '#1b1e28', -- black
     '#D0679D', -- red
     '#5DE4C7', -- green
-    '#5DE4C7', -- yellow
+    '#d9d94a', -- yellow
     '#ADD7FF', -- blue
     '#91B4D5', -- magenta
     '#89DDFF', -- cyan
@@ -169,7 +169,7 @@ local poimandres = {
     '#3b4258', -- bright black
     '#D0679D', -- bright red
     '#5DE4C7', -- bright green
-    '#5DE4C7', -- bright yellow
+    '#d9d94a', -- bright yellow
     '#ADD7FF', -- bright blue
     '#91B4D5', -- bright magenta
     '#89DDFF', -- bright cyan
