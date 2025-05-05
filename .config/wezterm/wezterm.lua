@@ -134,7 +134,7 @@ bar.apply_to_config(config, {
   modules = {
     tabs = {
       active_tab_fg = 7,
-      inactive_tab_fg = 2
+      inactive_tab_fg = 3
     },
     workspace = {
       enabled = false,
@@ -185,7 +185,90 @@ local poimandres = {
   copy_mode_inactive_highlight_fg = { Color = '#1b1e28' },
 }
 
-for k, v in pairs(poimandres) do
+local decay = {
+  foreground = '#b6beca',
+  background = '#171B20',
+  cursor_bg = '#b6beca',
+  cursor_fg = '#171B20',
+  cursor_border = '#b6beca',
+  selection_fg = '#171B20',
+  selection_bg = '#b6beca',
+  scrollbar_thumb = '#485263',
+  split = '#485263',
+  
+  ansi = {
+    '#171B20', -- black
+    '#e26c7c', -- red
+    '#78DBA9', -- green
+    '#f1cf8a', -- yellow
+    '#86aaec', -- blue
+    '#c68aee', -- magenta
+    '#70a5eb', -- cyan
+    '#b6beca', -- white
+  },
+  
+  brights = {
+    '#485263', -- bright black
+    '#e26c7c', -- bright red
+    '#78DBA9', -- bright green
+    '#f1cf8a', -- bright yellow
+    '#86aaec', -- bright blue
+    '#c68aee', -- bright magenta
+    '#70A5EB', -- bright cyan
+    '#dee1e6', -- bright white
+  },
+  
+  indexed = { [16] = '#9cd1ff' },
+  compose_cursor = '#78DBA9',
+  
+  copy_mode_active_highlight_bg = { Color = '#78DBA9' },
+  copy_mode_active_highlight_fg = { Color = '#171B20' },
+  copy_mode_inactive_highlight_bg = { Color = '#86aaec' },
+  copy_mode_inactive_highlight_fg = { Color = '#171B20' },
+}
+
+local jabuti = {
+  foreground = '#c0cbe3',
+  background = '#292A37',
+  cursor_bg = '#c0cbe3',
+  cursor_fg = '#292A37',
+  cursor_border = '#c0cbe3',
+  selection_fg = '#292A37',
+  selection_bg = '#c0cbe3',
+  scrollbar_thumb = '#485263',
+  split = '#485263',
+  
+  ansi = {
+    "#292A37", -- black
+    "#ec6a88", -- red
+    "#3FDAA4", -- green
+    "#e1c697", -- yellow
+    "#64acfa", -- blue
+    "#be95ff", -- magenta
+    "#3FC6DE", -- cyan
+    "#c0cbe3", -- white
+  },
+  
+  brights = {
+    "#45475d", -- bright black
+    "#ec6a88", -- bright red
+    "#3FDAA4", -- bright green
+    "#e1c697", -- bright yellow
+    "#64acfa", -- bright blue
+    "#be95ff", -- bright magenta
+    "#3FC6DE", -- bright cyan
+    "#d9e0ee", -- bright white
+  },
+  
+  indexed = { [16] = '#8b8da9' },
+  compose_cursor = '#3FDAA4',
+  
+  copy_mode_active_highlight_bg = { Color = '#3FDAA4' },
+  copy_mode_active_highlight_fg = { Color = '#292A37' },
+  copy_mode_inactive_highlight_bg = { Color = '#3FC6DE' },
+  copy_mode_inactive_highlight_fg = { Color = '#292A37' },
+}
+for k, v in pairs(jabuti) do
   config.colors[k] = v
 end
 
