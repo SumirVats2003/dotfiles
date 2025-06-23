@@ -12,6 +12,12 @@ if wezterm.config_builder then
 end
 
 -- config.color_scheme = 'Catppuccin Mocha (Gogh)'
+-- config.color_scheme = 'Rosé Pine (Gogh)'
+-- config.color_scheme = 'rose-pine'
+-- config.color_scheme = 'Rosé Pine Moon (base16)'
+-- config.color_scheme = 'tokyonight'
+-- config.color_scheme = 'tokyonight_moon'
+config.color_scheme = 'OneDark (base16)'
 config.font = wezterm.font('CaskaydiaCove Nerd Font')
 config.font_size = 14
 config.launch_menu = launch_menu
@@ -268,8 +274,64 @@ local jabuti = {
   copy_mode_inactive_highlight_bg = { Color = '#3FC6DE' },
   copy_mode_inactive_highlight_fg = { Color = '#292A37' },
 }
-for k, v in pairs(jabuti) do
+
+local nordic = {
+  foreground = '#BBC3D4', -- white0_normal
+  background = '#1E222A', -- black1
+  cursor_bg = '#BBC3D4', -- white0_normal
+  cursor_fg = '#1E222A', -- black1
+  cursor_border = '#BBC3D4', -- white0_normal
+  selection_fg = '#1E222A', -- black1
+  selection_bg = '#BBC3D4', -- white0_normal
+  scrollbar_thumb = '#3B4252', -- gray2
+  split = '#3B4252', -- gray2
+
+  ansi = {
+    '#1E222A', -- black1
+    '#C5727A', -- red.bright
+    '#B1C89D', -- green.bright
+    '#EFD49F', -- yellow.bright
+    '#81A1C1', -- blue1
+    '#BE9DB8', -- magenta.bright
+    '#9FC6C5', -- cyan.bright
+    '#BBC3D4', -- white0_normal
+  },
+
+  brights = {
+    '#3B4252', -- gray2 (bright black)
+    '#BF616A', -- red.base
+    '#A3BE8C', -- green.base
+    '#EBCB8B', -- yellow.base
+    '#5E81AC', -- blue0
+    '#B48EAD', -- magenta.base
+    '#8FBCBB', -- cyan.base
+    '#E5E9F0', -- white2 (bright white)
+  },
+
+  indexed = { [16] = '#ECEFF4' }, -- white3
+  compose_cursor = '#B1C89D', -- green.bright
+
+  copy_mode_active_highlight_bg = { Color = '#B1C89D' }, -- green.bright
+  copy_mode_active_highlight_fg = { Color = '#1E222A' }, -- black1
+  copy_mode_inactive_highlight_bg = { Color = '#81A1C1' }, -- blue1
+  copy_mode_inactive_highlight_fg = { Color = '#1E222A' }, -- black1
+}
+
+for k, v in pairs(nordic) do
   config.colors[k] = v
 end
+
+-- local dimmer = { brightness = 0.02 }
+-- config.background = {
+--   {
+--     source = {
+--       File = 'C:\\Users\\sumir\\Downloads\\ac.png',
+--     },
+--     width = '100%',
+--     repeat_x = 'NoRepeat',
+--     vertical_align = "Middle",
+--     hsb = dimmer,
+--   },
+-- }
 
 return config
