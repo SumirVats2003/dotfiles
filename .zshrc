@@ -41,7 +41,7 @@ ZSH_THEME="archcraft-dwm"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -52,7 +52,7 @@ ZSH_THEME="archcraft-dwm"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -102,6 +102,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias v="nvim"
+
 bindkey -v
-neofetch
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm use lts/\*
+clear
+
+source <(ng completion script)
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/etc/lua/bin"
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:$(npm root -g)/@angular/language-server/bin"
+export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/mnt/c/Windows/System32"
+
+alias lg="lazygit"
+alias vim="nvim"
