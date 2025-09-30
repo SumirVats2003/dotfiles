@@ -12,16 +12,9 @@ if wezterm.config_builder then
 end
 
 -- config.color_scheme = 'Catppuccin Mocha (Gogh)'
--- config.color_scheme = 'Rosé Pine (Gogh)'
--- config.color_scheme = 'rose-pine'
--- config.color_scheme = 'Rosé Pine Moon (base16)'
--- config.color_scheme = 'tokyonight'
--- config.color_scheme = 'tokyonight_moon'
-config.color_scheme = 'OneDark (base16)'
 config.font = wezterm.font('CaskaydiaCove Nerd Font')
 config.font_size = 14
 config.launch_menu = launch_menu
--- config.window_background_opacity = 0.9
 
 -- this adds the ability to use ctrl+v to paste the system clipboard 
 config.keys = {
@@ -317,7 +310,49 @@ local nordic = {
   copy_mode_inactive_highlight_fg = { Color = '#1E222A' }, -- black1
 }
 
-for k, v in pairs(nordic) do
+local catppuccin_mocha = {
+  foreground = '#CDD6F4', -- text
+  background = '#171c25', -- base
+  cursor_bg = '#F5E0DC', -- rosewater
+  cursor_fg = '#1E1E2E', -- base
+  cursor_border = '#F5E0DC', -- rosewater
+  selection_fg = '#1E1E2E', -- base
+  selection_bg = '#F5E0DC', -- rosewater
+  scrollbar_thumb = '#45475A', -- surface2
+  split = '#45475A', -- surface2
+
+  ansi = {
+    '#171c25', -- base (black)
+    '#f16d93', -- red
+    '#85e47c', -- green
+    '#fdda8d', -- yellow
+    '#6da4fb', -- blue
+    '#F5C2E7', -- pink
+    '#79e4d2', -- teal
+    '#a7b3df', -- subtext1 (white)
+  },
+
+  brights = {
+    '#585B70', -- surface1 (bright black)
+    '#f1648c', -- red
+    '#77e46d', -- green
+    '#fedb91', -- yellow
+    '#65a0fe', -- blue
+    '#F5C2E7', -- pink
+    '#75e3d1', -- teal
+    '#949fcb', -- subtext0 (bright white)
+  },
+
+  indexed = { [16] = '#FAB387' }, -- peach
+  compose_cursor = '#A6E3A1', -- green
+
+  copy_mode_active_highlight_bg = { Color = '#A6E3A1' }, -- green
+  copy_mode_active_highlight_fg = { Color = '#1E1E2E' }, -- base
+  copy_mode_inactive_highlight_bg = { Color = '#89B4FA' }, -- blue
+  copy_mode_inactive_highlight_fg = { Color = '#1E1E2E' }, -- base
+}
+
+for k, v in pairs(catppuccin_mocha) do
   config.colors[k] = v
 end
 
