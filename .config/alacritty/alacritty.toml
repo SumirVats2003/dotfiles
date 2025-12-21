@@ -2,7 +2,7 @@
 size = 14.0
 
 [font.normal]
-family = "Jetbrains Mono Nerd Font"
+family = "CaskaydiaCove NF"
 style = "Regular"
 
 [window.padding]
@@ -11,6 +11,12 @@ y = 5
 
 [window]
 # opacity = 0.9
+startup_mode = "Maximized"
+dynamic_title = true
+decorations = "None"
+
+[terminal]
+shell = { program = "wsl.exe", args = ["-d", "Ubuntu", "--cd", "~"] }
 
 [colors.bright]
 black = "#444b6a"
@@ -33,9 +39,8 @@ white = "#787c99"
 yellow = "#e0af68"
 
 [colors.primary]
-background = "#1a1b26"
+background = "#1A1D23"
 foreground = "#a9b1d6"
-
 
 
 ---------------------
