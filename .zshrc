@@ -103,28 +103,25 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:/etc/lua/bin"
-export PATH="$PATH:/etc/sqlite"
+# export PATH="$PATH:/etc/lua/bin"
+# export PATH="$PATH:/etc/sqlite"
 export PATH="$PATH:/etc/jdtls/bin"
 export PATH=$PATH:/usr/local/go/bin
-export PATH="$PATH:$(npm root -g)/@angular/language-server/bin"
-export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+# export PATH="$PATH:$(npm root -g)/@angular/language-server/bin"
+# export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
-export PATH="$PATH:/mnt/c/Windows/System32"
-export GEMINI_API_KEY=""
-
-alias lg="lazygit"
-alias vim="nvim"
+# export PATH="$PATH:/mnt/c/Windows/System32"
+# export GEMINI_API_KEY=""
 
 # bun completions
-[ -s "/home/sam/.bun/_bun" ] && source "/home/sam/.bun/_bun"
+# [ -s "/home/sam/.bun/_bun" ] && source "/home/sam/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
