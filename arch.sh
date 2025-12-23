@@ -1,6 +1,6 @@
 sudo pacman -Syu
 
-sudo pacman -S git zsh kitty go
+sudo pacman -S git zsh alacritty go
 
 # installing yay
 sudo pacman -S --needed git base-devel
@@ -15,7 +15,7 @@ yay -Syu --devel
 yay -Y --devel --save
 
 # general utilities
-sudo pacman -S wofi hyprpaper waybar dunst thunar lazygit tmux shotwell fzf
+sudo pacman -S wofi hyprpaper waybar dunst thunar lazygit tmux shotwell fzf zathura zathura-pdf-poppler qutebrowser
 git config --global user.name "Sumir Vats"
 git config --global user.email "sumirvats@gmail.com"
 go install go.senan.xyz/cliphist@latest
@@ -24,9 +24,6 @@ go install go.senan.xyz/cliphist@latest
 sudo pacman -S grim imagemagick wl-clipboard
 yay -S quickshell
 git clone https://github.com/jamdon2/hyprquickshot ~/.config/quickshell/hyprquickshot
-
-# brave
-curl -fsS https://dl.brave.com/install.sh | sh
 
 # copy my dotfiles
 cd ~
