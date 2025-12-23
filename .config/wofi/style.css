@@ -1,0 +1,40 @@
+* {
+  font-family: "RecMonoLinearNerdFont", "CaskaydiaMono Nerd Font", "JetBrainsMono Nerd Font", "NotoSansMono Nerd Font", "Font Awesome 6 Brands", "JetBrains Mono", "Fira Code", "Inconsolata", "Noto Sans", monospace;
+  color: #519eef;
+  background: transparent;
+}
+
+#window {
+  background: #131212;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #519eef;
+}
+
+#input {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#outer-box {
+  padding: 10px;
+}
+
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#entry:selected {
+  background-color: #1f232a;
+}
+
+#text {
+  margin: 2px;
+}
