@@ -13,7 +13,7 @@ yay -Syu --devel
 yay -Y --devel --save
 
 # general utilities
-sudo pacman -S zsh alacritty go rofi hyprpaper waybar dunst yazi thunar lazygit tmux shotwell fzf zathura zathura-pdf-poppler brightnessctl
+sudo pacman -S zsh alacritty go wofi hyprpaper waybar dunst yazi dolphin lazygit tmux shotwell fzf zathura zathura-pdf-poppler brightnessctl
 git config --global user.name "Sumir Vats"
 git config --global user.email "sumirvats@gmail.com"
 go install go.senan.xyz/cliphist@latest
