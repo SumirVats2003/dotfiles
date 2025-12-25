@@ -124,5 +124,5 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 # [ -s "/home/sam/.bun/_bun" ] && source "/home/sam/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"

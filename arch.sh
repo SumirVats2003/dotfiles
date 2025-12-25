@@ -1,7 +1,5 @@
 sudo pacman -Syu
 
-sudo pacman -S git zsh alacritty go
-
 # installing yay
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
@@ -15,7 +13,7 @@ yay -Syu --devel
 yay -Y --devel --save
 
 # general utilities
-sudo pacman -S wofi hyprpaper waybar dunst thunar lazygit tmux shotwell fzf zathura zathura-pdf-poppler
+sudo pacman -S zsh alacritty go rofi hyprpaper waybar dunst yazi thunar lazygit tmux shotwell fzf zathura zathura-pdf-poppler brightnessctl
 git config --global user.name "Sumir Vats"
 git config --global user.email "sumirvats@gmail.com"
 go install go.senan.xyz/cliphist@latest
@@ -35,7 +33,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp .tmux.conf ~/.tmux.conf
 cp -r .config/* ~/.config/
 
-# shell
+# shell - run this after installing oh-my-zsh
 git clone https://github.com/mrx04programmer/ZshTheme-ArchCraft/ ~/zsh-theme
 cp ~/zsh-theme/archcraft-dwm.zsh-theme ~/.oh-my-zsh/themes/archcraft-dwm.zsh-theme
 rm -rf ~/zsh-theme
