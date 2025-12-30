@@ -101,7 +101,7 @@ window#waybar {
 #battery.warning:not(.charging) {
   background-color: #f7768e;
   color: #24283b;
-  border-radius: 30px;
+  border-radius: 0px;
 }
 
 #network {
