@@ -26,7 +26,7 @@
       "2": "",
       "3": "",
       "4": "",
-      "5": "󰎆",
+      "5": "",
       "6": "󱓷",
       "7": "󱇧",
       "8": "",
@@ -56,8 +56,8 @@
   },
   "battery": {
     "states": {
-      "warning": 30,
-      "critical": 15
+      "warning": 20,
+      "critical": 10
     },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
@@ -78,15 +78,9 @@
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
     "format-muted": "󰖁 Muted",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
