@@ -19,7 +19,7 @@
   "hyprland/workspaces": {
     "disable-scroll": true,
     "format": "{icon} {name}",
-    "active-only": false,
+    "active-only": true,
     "all-outputs": true,
     "format-icons": {
       "1": "󰖟",
@@ -34,7 +34,7 @@
       "10": ""
     },
     "persistent-workspaces": {
-      "*": 10
+      "*": 5
     }
   },
   "custom/arch": {
