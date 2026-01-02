@@ -82,6 +82,7 @@ window#waybar {
   margin: 2px;
   margin-bottom: 1px;
   padding: 5px 10px;
+  padding-right: 11px;
 }
 
 #clock {
