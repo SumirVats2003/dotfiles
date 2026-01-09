@@ -13,11 +13,10 @@ yay -Syu --devel
 yay -Y --devel --save
 
 # general utilities
-sudo pacman -S zsh kitty go wofi hyprpaper waybar dunst yazi dolphin lazygit tmux shotwell fzf zathura zathura-pdf-poppler brightnessctl
+sudo pacman -S zsh kitty go hyprpaper hyprlock hyprsunset waybar dunst yazi dolphin lazygit tmux shotwell fzf zathura zathura-pdf-poppler brightnessctl qt5-quickcontrols2 qt5-graphicaleffects qt5-svg archlinux-xdg-menu kvantum-qt5 kservice5
 yay -S wlogout
 git config --global user.name "Sumir Vats"
 git config --global user.email "sumirvats@gmail.com"
-go install go.senan.xyz/cliphist@latest
 
 # screenshot utilty
 sudo pacman -S grim imagemagick wl-clipboard
